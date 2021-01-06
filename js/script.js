@@ -12,39 +12,35 @@ function getMoveName(argMoveId){
   }
 
 function displayResult(argComputerMove, argPlayerMove){
-  if( argcomputerMove == 'kamień' && argplayerMove == 'papier'){
-    printMessage('Ty wygrywasz!');
-  }
-  if( argcomputerMove == 'kamień' && argplayerMove == 'nożyce'){
-    printMessage('Przegrałeś !');
-  }
-  if( argcomputerMove == 'papier' && argplayerMove == 'kamień'){
-    printMessage('Przegrałeś !');
-  }
-  if( argcomputerMove == 'papier' && argplayerMove == 'nożyce'){
-    printMessage('Ty wygrywasz!');
-  }
-  if( argcomputerMove == 'nożyce' && argplayerMove == 'papier'){
-    printMessage('Przegrałeś !');
-  }
-  if( argcomputerMove == 'nożyce' && argplayerMove == 'kamień'){
-    printMessage('Ty wygrywasz!');
+  if( argComputerMove == 'kamień' && argPlayerMove == 'papier'){
+    return 'Ty wygrywasz!';
+  }else if( argComputerMove == 'kamień' && argPlayerMove == 'nożyce'){
+    return 'Przegrałeś !';
+  }else if( argComputerMove == 'papier' && argPlayerMove == 'kamień'){
+    return 'Przegrałeś !';
+  }else if( argComputerMove == 'papier' && argPlayerMove == 'nożyce'){
+    return 'Ty wygrywasz!';
+  }else if( argComputerMove == 'nożyce' && argPlayerMove == 'papier'){
+    return 'Przegrałeś !';
+  }else if( argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
+    return 'Ty wygrywasz!';
   }
 }
 
 let randomNumber = Math.floor(Math.random() * 3 + 1);
 
 console.log('Wylosowana liczba to: ' + randomNumber);
-let argcomputerMove = getMoveName(randomNumber);
+let argComputerMove = getMoveName(randomNumber);
 
-printMessage('Mój ruch to: ' + argcomputerMove);
+printMessage('Mój ruch to: ' + argComputerMove);
 
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
 console.log('Gracz wpisał: ' + playerInput);
-let argplayerMove = getMoveName(playerInput);
+let argPlayerMove = getMoveName(playerInput);
 
-printMessage('Twój ruch to: ' + argplayerMove);
+printMessage('Twój ruch to: ' + argPlayerMove);
 
-displayResult(argcomputerMove, argplayerMove);
+let gameResult = displayResult(argComputerMove, argPlayerMove);
+printMessage(gameResult);
 
