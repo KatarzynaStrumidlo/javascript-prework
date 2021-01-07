@@ -6,8 +6,27 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<h1>Gra: kamień, papier, nożyce</h1>
+	<div class="rules">
+		<p>Zasady gry</p>
+		<ol>
+			<li>Pojedyncza runda gry polega na jednoczesnym zagraniu dwóch graczy.</li>
+			<li>Każdy gracz może wybrać jeden z ruchów: papier, kamień, lub nożyce.</li>
+			<li>Rolę drugiego gracza będzie pełnił komputer.</li>
+			<li>Wynik rundy może być następujący:
+				<ul>
+					<li>remis – jeśli obaj gracze wybrali ten sam ruch,</li>
+					<li>wygrana gracza, który zagrał papier, jeśli drugi gracz zagrał kamień,</li>
+					<li>wygrana gracza, który zagrał kamień, jeśli drugi gracz zagrał nożyce,</li>
+					<li>wygrana gracza, który zagrał nożyce, jeśli drugi gracz zagrał papier.</li>
+				</ul>
+			</li>
+			<li>Gra toczy się do osiągnięcia przez jednego z graczy wcześniej ustalonej liczby wygranych rund.</li>
+		</ol>
+	</div>
 	<div class="container">
 		<div id="buttons">
+			<h3>Wybierz swój ruch</h3>
 			<button id="play-rock">Kamień</button>
 			<button id="play-paper">Papier</button>
 			<button id="play-scissors">Nożyce</button>
